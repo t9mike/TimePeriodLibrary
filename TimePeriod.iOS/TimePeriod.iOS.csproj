@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03FEF469-8584-4300-9570-6ADEFBA86EEB}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{a52b8a63-bc84-4b47-910d-692533484892}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TimePeriod.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>TimePeriod.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Condition="'$(CreateUITestProject)' == true" Include="Xamarin.TestCloud.Agent" Version="0.21.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\TimePeriod\Years.cs">
+      <Link>Years.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\YearWeekType.cs">
+      <Link>YearWeekType.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\YearType.cs">
+      <Link>YearType.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\YearTimeRange.cs">
+      <Link>YearTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\YearQuarter.cs">
+      <Link>YearQuarter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\YearMonth.cs">
+      <Link>YearMonth.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\YearHalfyear.cs">
+      <Link>YearHalfyear.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Year.cs">
+      <Link>Year.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Weeks.cs">
+      <Link>Weeks.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\WeekTimeRange.cs">
+      <Link>WeekTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Week.cs">
+      <Link>Week.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeZoneDurationProvider.cs">
+      <Link>TimeZoneDurationProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeTrim.cs">
+      <Link>TimeTrim.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeTool.cs">
+      <Link>TimeTool.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeSpec.cs">
+      <Link>TimeSpec.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeRange.cs">
+      <Link>TimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodSubtractor.cs">
+      <Link>TimePeriodSubtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodStartComparer.cs">
+      <Link>TimePeriodStartComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodReversComparer.cs">
+      <Link>TimePeriodReversComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodIntersector.cs">
+      <Link>TimePeriodIntersector.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodEndComparer.cs">
+      <Link>TimePeriodEndComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodDurationComparer.cs">
+      <Link>TimePeriodDurationComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodCombiner.cs">
+      <Link>TimePeriodCombiner.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodCollection.cs">
+      <Link>TimePeriodCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodChain.cs">
+      <Link>TimePeriodChain.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimePeriodCalc.cs">
+      <Link>TimePeriodCalc.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeLinePeriodEvaluator.cs">
+      <Link>TimeLinePeriodEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeLineMomentCollection.cs">
+      <Link>TimeLineMomentCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeLineMoment.cs">
+      <Link>TimeLineMoment.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeLine.cs">
+      <Link>TimeLine.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeInterval.cs">
+      <Link>TimeInterval.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeGapCalculator.cs">
+      <Link>TimeGapCalculator.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeFormatter.cs">
+      <Link>TimeFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeCompare.cs">
+      <Link>TimeCompare.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeCalendarConfig.cs">
+      <Link>TimeCalendarConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeCalendar.cs">
+      <Link>TimeCalendar.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\TimeBlock.cs">
+      <Link>TimeBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Time.cs">
+      <Link>Time.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\SystemClock.cs">
+      <Link>SystemClock.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Strings.cs">
+      <Link>Strings.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\StaticClock.cs">
+      <Link>StaticClock.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\SeekDirection.cs">
+      <Link>SeekDirection.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\SeekBoundaryMode.cs">
+      <Link>SeekBoundaryMode.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Quarters.cs">
+      <Link>Quarters.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\QuarterTimeRange.cs">
+      <Link>QuarterTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Quarter.cs">
+      <Link>Quarter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\PeriodRelation.cs">
+      <Link>PeriodRelation.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Now.cs">
+      <Link>Now.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Months.cs">
+      <Link>Months.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\MonthTimeRange.cs">
+      <Link>MonthTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\MonthRange.cs">
+      <Link>MonthRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Month.cs">
+      <Link>Month.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Minutes.cs">
+      <Link>Minutes.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\MinuteTimeRange.cs">
+      <Link>MinuteTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Minute.cs">
+      <Link>Minute.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ListSortDirection.Pcl.cs">
+      <Link>ListSortDirection.Pcl.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\InvalidMomentException.cs">
+      <Link>InvalidMomentException.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\IntervalEdge.cs">
+      <Link>IntervalEdge.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeRange.cs">
+      <Link>ITimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimePeriodMapper.cs">
+      <Link>ITimePeriodMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimePeriodContainer.cs">
+      <Link>ITimePeriodContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimePeriodComparer.cs">
+      <Link>ITimePeriodComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimePeriodCollection.cs">
+      <Link>ITimePeriodCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimePeriodChain.cs">
+      <Link>ITimePeriodChain.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimePeriod.cs">
+      <Link>ITimePeriod.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeLineMomentCollection.cs">
+      <Link>ITimeLineMomentCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeLineMoment.cs">
+      <Link>ITimeLineMoment.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeLine.cs">
+      <Link>ITimeLine.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeInterval.cs">
+      <Link>ITimeInterval.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeFormatter.cs">
+      <Link>ITimeFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeCalendar.cs">
+      <Link>ITimeCalendar.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ITimeBlock.cs">
+      <Link>ITimeBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\IDurationProvider.cs">
+      <Link>IDurationProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\IDateTimeSet.cs">
+      <Link>IDateTimeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\IClock.cs">
+      <Link>IClock.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ICalendarVisitorFilter.cs">
+      <Link>ICalendarVisitorFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ICalendarVisitorContext.cs">
+      <Link>ICalendarVisitorContext.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ICalendarTimeRange.cs">
+      <Link>ICalendarTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ICalendarPeriodCollectorFilter.cs">
+      <Link>ICalendarPeriodCollectorFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Hours.cs">
+      <Link>Hours.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\HourTimeRange.cs">
+      <Link>HourTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\HourRange.cs">
+      <Link>HourRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Hour.cs">
+      <Link>Hour.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\HashTool.cs">
+      <Link>HashTool.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Halfyears.cs">
+      <Link>Halfyears.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\HalfyearTimeRange.cs">
+      <Link>HalfyearTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Halfyear.cs">
+      <Link>Halfyear.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\FiscalYearAlignment.cs">
+      <Link>FiscalYearAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\FiscalQuarterGrouping.cs">
+      <Link>FiscalQuarterGrouping.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\FiscalCalendarTool.cs">
+      <Link>FiscalCalendarTool.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DurationProvider.cs">
+      <Link>DurationProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DurationFormatType.cs">
+      <Link>DurationFormatType.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DurationCalculator.cs">
+      <Link>DurationCalculator.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Duration.cs">
+      <Link>Duration.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Days.cs">
+      <Link>Days.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DayTimeRange.cs">
+      <Link>DayTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DaySeekerContext.cs">
+      <Link>DaySeekerContext.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DaySeeker.cs">
+      <Link>DaySeeker.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DayRange.cs">
+      <Link>DayRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DayHourRange.cs">
+      <Link>DayHourRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Day.cs">
+      <Link>Day.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DateTimeSet.cs">
+      <Link>DateTimeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DateDiff.cs">
+      <Link>DateDiff.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\DateAdd.cs">
+      <Link>DateAdd.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\Date.cs">
+      <Link>Date.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\ClockProxy.cs">
+      <Link>ClockProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarVisitorFilter.cs">
+      <Link>CalendarVisitorFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarVisitor.cs">
+      <Link>CalendarVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarTimeRange.cs">
+      <Link>CalendarTimeRange.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarPeriodCollectorFilter.cs">
+      <Link>CalendarPeriodCollectorFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarPeriodCollectorContext.cs">
+      <Link>CalendarPeriodCollectorContext.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarPeriodCollector.cs">
+      <Link>CalendarPeriodCollector.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarNameType.cs">
+      <Link>CalendarNameType.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarDateDiff.cs">
+      <Link>CalendarDateDiff.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\CalendarDateAdd.cs">
+      <Link>CalendarDateAdd.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\BroadcastYear.cs">
+      <Link>BroadcastYear.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\BroadcastWeek.cs">
+      <Link>BroadcastWeek.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\BroadcastMonth.cs">
+      <Link>BroadcastMonth.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\BroadcastCalendarTool.cs">
+      <Link>BroadcastCalendarTool.cs</Link>
+    </Compile>
+    <Compile Include="..\TimePeriod\AmbiguousMomentException.cs">
+      <Link>AmbiguousMomentException.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\TimePeriod\TimePeriodLibrary.snk">
+      <Link>TimePeriodLibrary.snk</Link>
+    </None>
+    <None Include="..\TimePeriod\TimePeriodInterfaces.cd">
+      <Link>TimePeriodInterfaces.cd</Link>
+    </None>
+    <None Include="..\TimePeriod\TimePeriodContainerInterfaces.cd">
+      <Link>TimePeriodContainerInterfaces.cd</Link>
+    </None>
+    <None Include="..\TimePeriod\TimePeriodCalendarClasses.cd">
+      <Link>TimePeriodCalendarClasses.cd</Link>
+    </None>
+    <None Include="..\TimePeriod\TimePeriod.csproj">
+      <Link>TimePeriod.csproj</Link>
+    </None>
+    <None Include="..\TimePeriod\TimeCalendarInterfaces.cd">
+      <Link>TimeCalendarInterfaces.cd</Link>
+    </None>
+    <None Include="..\TimePeriod\Strings.resx">
+      <Link>Strings.resx</Link>
+    </None>
+    <None Include="..\TimePeriod\Strings.de.resx">
+      <Link>Strings.de.resx</Link>
+    </None>
+    <None Include="..\TimePeriod\Settings.StyleCop">
+      <Link>Settings.StyleCop</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
